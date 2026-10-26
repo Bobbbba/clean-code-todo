@@ -1,0 +1,20 @@
+# Папки с зависимостями
+node_modules
+
+# Сгенерированные файлы и сборки
+dist
+build
+coverage
+
+# Лок-файлы пакетных менеджеров (генерируются автоматически)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Системные папки и файлы
+.DS_Store
+.env
+.env.*
+
+# Конфигурации GitHub (Actions, шаблоны и т.д.)
+.github

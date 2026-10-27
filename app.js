@@ -49,6 +49,16 @@ const addTask = function () {
   taskInput.value = '';
 };
 
+const saveEditedTask = function (listItem, textInput, label, editButton) {
+  label.innerText = textInput.value;
+  editButton.innerText = 'Edit';
+};
+
+const enableEditMode = function (listItem, textInput, label, editButton) {
+  textInput.value = label.innerText;
+  editButton.innerText = 'Save';
+};
+
 const editTask = function () {
   const listItem = this.parentNode;
 
@@ -58,11 +68,9 @@ const editTask = function () {
   const isEditMode = listItem.classList.contains('editMode');
 
   if (isEditMode) {
-    label.innerText = textInput.value;
-    editButton.innerText = 'Edit';
+    saveEditedTask(listItem, textInput, label, editButton);
   } else {
-    textInput.value = label.innerText;
-    editButton.innerText = 'Save';
+    enableEditMode(listItem, textInput, label, editButton);
   }
 
   listItem.classList.toggle('editMode');

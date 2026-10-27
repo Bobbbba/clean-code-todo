@@ -2,10 +2,8 @@ import js from '@eslint/js';
 import globals from 'globals';
 
 export default [
-
   js.configs.recommended,
 
- 
   {
     files: ['**/*.js', '**/*.mjs'],
 
@@ -13,12 +11,11 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
-        ...globals.browser, 
+        ...globals.browser,
       },
     },
 
     rules: {
-     
       'no-var': 'error',
       'prefer-const': 'error',
       'no-console': 'error',
